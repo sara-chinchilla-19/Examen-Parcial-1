@@ -1,0 +1,67 @@
+using System;
+
+namespace Proyecto_1._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int resul, resta, a, b, c, d;
+            int rep = 2;
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("****************BIENVENID@***************");
+            Console.WriteLine("***Adivinaremos Tu Fecha de Nacimiento***");
+            Console.WriteLine("     ");
+            Console.WriteLine("Presiona enter después de cada paso para continuar...");
+            Console.ReadKey();
+
+            do
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("     ");
+                Console.WriteLine("Primero, Anota en un Papel el Día que Naciste");
+                Console.ReadKey();
+
+                Console.WriteLine("     ");
+                Console.WriteLine("Ahora, Multiplica ese Número por 20");
+                Console.ReadKey();
+
+                Console.WriteLine("     ");
+                Console.WriteLine("Al Resultado Súmale 73");
+                Console.ReadKey();
+
+                Console.WriteLine("     ");
+                Console.WriteLine("Ahora, Multiplica el Resultado por 5");
+                Console.ReadKey();
+
+                Console.WriteLine("     ");
+                Console.WriteLine("Por último, Súmale el Número de tu Mes de Nacimiento");
+                Console.ReadKey();
+
+                Console.WriteLine("     ");
+                Console.WriteLine("Escribe El Resultado:");
+                resul = Convert.ToInt32(Console.ReadLine());        
+
+                resta = resul - 365;
+
+                a = resta / 1000;
+                b = (resta % 1000) / 100;
+                c = (resta % 1000 % 100) / 10;
+                d = (resta % 1000 % 100 % 10) / 1;                
+
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("     ");
+                Console.WriteLine("Su Fecha de Cumpleaños es: {0}{1}/{2}{3}", a, b, c, d);
+
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine("     ");
+                Console.WriteLine("Quieres Jugar Otra Vez??   1.Sí  2.No");
+                rep = Convert.ToInt32(Console.ReadLine());
+
+             } while (rep == 1);
+
+            Console.ReadKey();
+        }
+    }
+}
