@@ -1,0 +1,62 @@
+using System;
+
+namespace Proyecto_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int result, div, resta;
+            int rep=2;
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.WriteLine("********Qué Comience el Juego!!********");
+            Console.ReadKey();
+
+            do
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("     ");
+                Console.WriteLine("Piensa en un Número Cualquiera... No Olvides Anotarlo");
+                Console.ReadKey();
+
+                Console.WriteLine("    ");
+                Console.WriteLine("Ahora El Resultado Multiplicalo por 2...");
+                Console.ReadKey();
+
+                Console.WriteLine("    ");
+                Console.WriteLine("Ahora Sumale 8 al Resultado...");
+                Console.ReadKey();
+
+                Console.WriteLine("    ");
+                Console.WriteLine("Ahora Multiplica por 5 ese Resultado...");
+                Console.ReadKey();
+
+                Console.WriteLine("    ");
+                Console.WriteLine("El Resultado Final es: (Escríbelo)");
+                result = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("    ");
+                Console.WriteLine("Muy Bien!! Ahora Adivinaré el Número en que Pensaste...");
+                Console.ReadKey();
+
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                div = result / 10;
+                resta = div - 4;
+                Console.WriteLine("    ");
+                Console.WriteLine("El Número que Pensaste Es: {0}", resta);
+                Console.ReadKey();
+
+                Console.ForegroundColor = ConsoleColor.Red;
+
+                Console.WriteLine("    ");
+                Console.WriteLine("Quieres Jugar Otra Vez?? 1=Sí 2=No");
+                rep = Convert.ToInt32(Console.ReadLine());
+
+            } while (rep == 1);
+
+            Console.ReadKey();
+        }
+    }
+}
